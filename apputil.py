@@ -35,7 +35,7 @@ class MarkovText(object):
             next_words = self.term_dict.get(current_word)
 
             if not next_words:  # last word case
-                current_word = random.choice(list(self.term_dict.keys()))
+                current_word = random.choice(list(self.get_term_dict.keys()))
             else:
                 current_word = np.random.choice(next_words)
 
